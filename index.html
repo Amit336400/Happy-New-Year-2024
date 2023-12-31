@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Happy New Year 2024</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Happy New Year 2024!</h1>
+        <p style="
+       box-shadow: 0 0 .2rem #fff,
+            0 0 .2rem #fff,
+            0 0 2rem #bc13fe,
+            0 0 0.8rem #bc13fe,
+            0 0 2.8rem #bc13fe,
+            inset 0 0 1.3rem #bc13fe;
+        
+        
+        ">Celebrate the joy of new beginnings.</p>
+    </header>
+
+    <section class="fireworks-container">
+        <!-- Fireworks animation will go here -->
+    </section>
+
+    <section class="wishes-container">
+        <p>Wishing you a year filled with happiness, success, and prosperity.</p>
+        <p>May each day bring you new opportunities and memorable moments.</p>
+        <p>Cheers to a fantastic New Year!</p>
+    </section>
+
+    <footer>
+        <p
+        style="
+        
+        color: #fff;
+  text-shadow:
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px #bc13fe,
+    0 0 82px #bc13fe,
+    0 0 92px #bc13fe,
+    0 0 102px #bc13fe,
+    0 0 151px #bc13fe;"
+        
+        >&copy; 2024 Amit Kundu</p>
+    </footer>
+
+    <script>
+
+document.addEventListener("DOMContentLoaded", function () {
+    setTimeout(function () {
+        document.body.classList.add('night');
+    }, 5000);   // Change background color after 5 seconds
+
+    createFireworks();
+});
+
+function createFireworks() {
+    const fireworksContainer = document.querySelector('.fireworks-container');
+
+    for (let i = 0; i < 10; i++) {
+        const firework = document.createElement('div');
+        firework.className = 'firework';
+        firework.style.left = `${getRandomNumber(100)}%`;
+        firework.style.animationDuration = `${getRandomNumber(3) + 2}s`; // Random duration between 2s and 5s
+        fireworksContainer.appendChild(firework);
+    }
+}
+
+function getRandomNumber(max) {
+    return Math.floor(Math.random() * max);
+}
+
+    </script>
+</body>
+</html>
